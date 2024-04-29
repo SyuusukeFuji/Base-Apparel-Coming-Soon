@@ -1,0 +1,255 @@
+:root{
+ --DesaturatedRed: hsl(0, 36%, 70%);
+ --SoftRed: hsl(0, 93%, 68%);
+ --DarkGrayishRed: hsl(0, 6%, 24%);
+ --LinearGrad1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+ --LinearGrad2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);   
+}
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;   
+    height: 100vh;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); }
+
+#card{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#left{
+    width: 55%;
+    height: 100%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    padding-left: 10rem;
+    padding-right: 12rem;
+    padding-top: 3rem;
+    
+}
+
+#logo{
+    margin-bottom: 9rem;
+}
+
+#mobile-model{
+    width: 100%;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+h1{
+    font-size: 4rem;
+    text-transform:uppercase;
+    letter-spacing: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#color-title{
+    color: var(--DesaturatedRed);
+    font-weight: 300;
+}
+
+#descText{
+    color: var(--DesaturatedRed);
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#mail-field{
+    border: 1px solid var(--DesaturatedRed);
+    border-radius: 2rem;
+    width: 100%;
+    height: 3rem;
+    padding-left: 2rem;
+    font-family: inherit;
+    font-size: inherit;
+
+}
+
+.errorBorder{
+    border: 1px solid var(--SoftRed) !important;
+}
+
+#mail-field::placeholder{
+    color: var(--DesaturatedRed);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+#mail-form{
+    display: flex;
+    flex-direction: row;
+}
+
+#error-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 19rem;
+    margin-top: 0.7rem;
+    z-index: 3;
+    position: absolute;
+    visibility: hidden;
+}
+
+#btSubmit{
+    border-radius: 2rem;
+    width: 5.5rem;
+    height: 3rem;
+    border: 1px solid transparent;
+    
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    z-index: 3;
+    position: absolute;
+    margin-left: 22rem;
+}
+
+#btSubmit:hover{
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 64%, 85%));
+}
+
+#arrow{
+    width: 0.88rem;
+    height: 1.1rem;
+    transform: scale(1);
+
+}
+
+#errorDisplay{
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    color: var(--SoftRed);
+    visibility: hidden;
+}
+.visibilityOn{
+    visibility: visible !important;
+}
+
+
+#right{
+    width: 45%;
+    height: 100%;
+}
+
+
+
+#model-img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1280px){
+
+    html{
+        font-size: 0.89rem;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    html{
+        font-size: 0.6rem;
+    }
+
+    #left{
+        padding-left: 6.2rem;
+    padding-right: 4.2rem;
+    padding-top: 3rem;
+
+    }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    html{
+        font-size: 0.8rem;
+    }
+
+    #body{
+        width: 375px;
+        height: 100vh;
+    }
+
+    #main{
+        width: 100vw;
+        height: 100vh;
+    }
+    #left{
+        width: 375px;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 3rem;
+        margin: 0 auto;
+    }
+    #logo{
+        margin-left: -12rem;
+        
+    }
+    #mobile-model{
+        visibility: visible;
+        width: 100vw;
+        height: 25%;
+        margin-top: -6rem;
+        margin-bottom: 2rem;
+
+    }
+    h1{
+        font-size: 3rem;
+    }
+    #descText{
+        padding-left: 4rem;
+        padding-right: 4rem;
+        text-align: center;
+        font-size: 0.97rem;
+    }
+
+    #mail-field{
+        width: 80%;
+    }
+
+    #error-icon{
+        margin-left: 20rem;
+    }
+
+    #btSubmit{
+        width: 4.5rem;
+        margin-left: 22rem;
+    }
+
+    #right{
+        width: 0%;
+    }
+}
